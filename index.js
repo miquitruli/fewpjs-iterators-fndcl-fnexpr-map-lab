@@ -12,6 +12,12 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  // use the .map method on the tutorials to return a new array
-  return tutorials
+    let capitalizedTutorials = tutorials.map(titleCase)
+    return capitalizedTutorials
 }
+
+function titleCase(str) {
+  return str.split(' ').map(w => w.charAt(0).toUpperCase() + w.substring(1)).join(' ');
+}
+
+//split(' ') = split where therer is a space
